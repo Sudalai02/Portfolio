@@ -1,153 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Portfolio – Sudalai S</title>
 
-    <!-- Font Awesome for social icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Portfolio – Sudalai S</title>
 
-    <!-- Project‑specific stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <body>
-    <!-- =========== HEADER / NAV =========== -->
-    <header class="header" id="header">
-      <nav class="nav">
-        <a href="#" class="nav_logo">CodeWithSudalai</a>
+  <!-- Project‑specific stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <div class="nav_menu" id="nav_menu">
-          <ul class="nav_list">
-            <li><a href="#home" class="nav_link">Home</a></li>
-            <li><a href="#about" class="nav_link">About</a></li>
-            <li><a href="#skills" class="nav_link">Skills</a></li>
-            <li><a href="#work" class="nav_link">Work</a></li>
-            <li><a href="#contact" class="nav_link">Contact</a></li>
-          </ul>
+<body>
+  <!-- =========== HEADER / NAV =========== -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#" class="nav_logo">CodeWithSudalai</a>
+
+      <div class="nav_menu" id="nav_menu">
+        <ul class="nav_list">
+          <li><a href="#home" class="nav_link">Home</a></li>
+          <li><a href="#about" class="nav_link">About</a></li>
+          <li><a href="#skills" class="nav_link">Skills</a></li>
+          <li><a href="#work" class="nav_link">Work</a></li>
+          <li><a href="#contact" class="nav_link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav_toggle" id="nav_toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- =========== HOME =========== -->
+    <section class="home" id="home">
+      <div class="home_data reveal">
+        <h1 class="home_title">
+          Hi,<br />I'm
+          <span class="home_title-color">Sudalai S</span><br />
+          Web Developer
+        </h1>
+
+        <a href="#contact" class="button">Contact</a>
+
+        <div class="home_social">
+          <a href="https://github.com/Sudalai02" class="home_social-icon" aria-label="GitHub" target="_blank"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sudalai--s" class="home_social-icon" aria-label="LinkedIn"
+            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:dev.sudalai@gmail.com" class="home_social-icon" aria-label="Email"><i
+              class="fas fa-envelope"></i></a>
         </div>
+      </div>
 
-        <div class="nav_toggle" id="nav_toggle">&#9776;</div>
-      </nav>
-    </header>
+      <div class="home_img reveal">
+        <!-- Replace 'profile.png' with your own image path -->
+        <img src="Images/home.svg" alt="Sudalai S" />
+      </div>
+    </section>
 
-    <main class="main">
-      <!-- =========== HOME =========== -->
-      <section class="home" id="home">
-        <div class="home_data reveal">
-          <h1 class="home_title">
-            Hi,<br />I'm
-            <span class="home_title-color">Sudalai S</span><br />
-            Web Developer
-          </h1>
-
-          <a href="#contact" class="button">Contact</a>
-
-          <div class="home_social">
-            <a
-              href="https://github.com/Sudalai02"
-              class="home_social-icon"
-              aria-label="GitHub"
-              target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/sudalai--s"
-              class="home_social-icon"
-              aria-label="LinkedIn"
-              target="_blank"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              href="mailto:dev.sudalai@gmail.com"
-              class="home_social-icon"
-              aria-label="Email"
-              ><i class="fas fa-envelope"></i
-            ></a>
-          </div>
+    <!-- =========== ABOUT =========== -->
+    <section id="about" class="reveal">
+      <h2>About Me</h2>
+      <div class="about_content">
+        <div class="about_img">
+          <img src="Images/profile.svg" alt="Sudalai S" />
         </div>
-
-        <div class="home_img reveal">
-          <!-- Replace 'profile.png' with your own image path -->
-          <img src="Images/home.svg" alt="Sudalai S" />
-        </div>
-      </section>
-
-      <!-- =========== ABOUT =========== -->
-      <section id="about" class="reveal">
-        <h2>About Me</h2>
-        <div class="about_content">
-          <div class="about_img">
-           <img src="Images/profile.svg" alt="Sudalai S"  />
-           </div>
-           <div class="about_text">
-        <p>
-          I'm a front‑end developer specialising in building and designing
-          responsive web applications. I’m focused on delivering clean, scalable
-          code and beautiful UI.
-        </p>
-        </div>
-        </div>
-      </section>
-
-      <!-- =========== SKILLS =========== -->
-      <section id="skills" class="reveal">
-        <h2>Skills</h2>
-        <div class="skills_grid">
-          <div class="skill">HTML5</div>
-          <div class="skill">CSS3 </div>
-          <div class="skill">JavaScript (ES6+)</div>
-          <div class="skill">Git & GitHub</div>
-          <div class="skill">Responsive Design</div>
-        </div>
-      </section>
-
-      <!-- =========== WORK =========== -->
-      <section id="work" class="reveal">
-        <h2>Projects</h2>
-        <div class="work_grid">
-          <div class="project">
-            <h3>Project One</h3>
-            <p>A simple and interactive To-Do-List website built with HTML, CSS, and javaScript. Users can add, complete and delete daily tasks.</p>
-            <a href="https://sudalai02.github.io/TO-DO-LIST/" class="button button-small">View</a>
-          </div>
-
-          <div class="project">
-            <h3>Project Two</h3>
-            <p>6-in-1 Investment Calculator- A simple, mobile-friendly web app to plan your finances Includes Future Value , SIP, Lumpsum, CGAR, IRR & Inflation calculator. Offline and Ideal for beginners and everyday investors. </p>
-            <a href="https://sudalai02.github.io/InvestMate/" class="button button-small">View</a>
-          </div>
-
-          <div class="project">
-            <h3>Project Three</h3>
-            <p>A simple and interactive Currency Converter using HTML, CSS, and javaScript that allows users to Convert between different world currencies using real-time exchange rates fetched from and API.</p>
-            <a href="https://sudalai02.github.io/Currency-Converter/" class="button button-small">View</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- =========== CONTACT =========== -->
-      <section id="contact" class="reveal">
-        <h2>Contact Me</h2>
-        <div class="contact_form">
-          <p style="text-align: center">
-            Feel free to reach out directly via email:
+        <div class="about_text">
+          <p>
+            I'm a front‑end developer specialising in building and designing
+            responsive web applications. I’m focused on delivering clean, scalable
+            code and beautiful UI.
           </p>
-          <a href="mailto:dev.sudalai@gmail.com" class="button">Send Email</a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-      © <span id="year"></span> Sudalai S – All rights reserved.
-    </footer>
+    <!-- =========== SKILLS =========== -->
+    <section id="skills" class="reveal">
+      <h2>Skills</h2>
+      <div class="skills_grid">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3 </div>
+        <div class="skill">JavaScript (ES6+)</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Responsive Design</div>
+      </div>
+    </section>
 
-    <!-- Project‑specific script -->
-    <script src="script.js"></script>
-  </body>
+    <!-- =========== WORK =========== -->
+    <section id="work" class="reveal">
+      <h2>Projects</h2>
+      <div class="work_grid">
+        <div class="project">
+          <h3>Project One</h3>
+          <p>A simple and interactive To-Do-List website built with HTML, CSS, and javaScript. Users can add, complete
+            and delete daily tasks.</p>
+          <a href="https://sudalai02.github.io/TO-DO-LIST/" class="button button-small">View</a>
+        </div>
+
+        <div class="project">
+          <h3>Project Two</h3>
+          <p>6-in-1 Investment Calculator- A simple, mobile-friendly web app to plan your finances Includes Future Value
+            , SIP, Lumpsum, CGAR, IRR & Inflation calculator. Offline and Ideal for beginners and everyday investors.
+          </p>
+          <a href="https://sudalai02.github.io/InvestMate/" class="button button-small">View</a>
+        </div>
+
+        <div class="project">
+          <h3>Project Three</h3>
+          <p>A simple and interactive Currency Converter using HTML, CSS, and javaScript that allows users to Convert
+            between different world currencies using real-time exchange rates fetched from and API.</p>
+          <a href="https://sudalai02.github.io/Currency-Converter/" class="button button-small">View</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== CONTACT =========== -->
+    <section id="contact" class="reveal">
+      <h2>Contact Me</h2>
+      <div class="contact_form">
+        <p style="text-align: center">
+          Feel free to reach out directly via email:
+        </p>
+        <a href="mailto:dev.sudalai@gmail.com" class="button">Send Email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Sudalai S – All rights reserved.
+  </footer>
+
+  <!-- Project‑specific script -->
+  <script src="script.js"></script>
+</body>
+
 </html>
