@@ -1,6 +1,6 @@
 /* ---------- Root & Resets ---------- */
 :root {
-  --primary: #6c63ff;
+  --primary: #3429fd;
   --dark: #2f2e41;
   --light: #f4f4f4;
   --text: #333;
@@ -239,28 +239,60 @@ section {
   }
 }
 
-/* ---------- Skills & Work ---------- */
-.skills_grid,
-.work_grid {
+/* ---------- Skills ---------- */
+.skills_grid{
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
-.skill,
-.project {
+.skill{
   background: #fff;
+  font-weight: 500;
   padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
 }
 
-.skill:hover,
-.project:hover {
+.skill:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(108, 99, 255, 0.2);
 }
+
+/* ---------- Projects ---------- */
+.work_grid{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.project{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  animation: float 4s ease-in-out infinite;
+  margin: 2px solid balck;
+  border-radius: 15px;
+}
+
+.project p{
+  display: flex;
+  font-size: large;
+  font-weight: 700;
+}
+
+.project img:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(108, 99, 255, 0.2);
+  cursor: pointer;
+}
+
 
 /* ---------- Contact ---------- */
 .contact_form {
