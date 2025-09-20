@@ -261,40 +261,46 @@ section {
 }
 
 /* ---------- Projects ---------- */
-.work_grid{
+.grid-work{
   display: flex;
   flex-direction: column;
-  gap: 50px;
 }
 .project{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 20px;
   align-items: center;
 }
 .project img{
   animation: float 4s ease-in-out infinite;
-  margin: 2px solid balck;
-  border-radius: 15px;
+  margin: 2px solid black;
   max-width: 100%;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgpa(0,0,0,0.1);
 }
-
+.project a{
+  text-decoration: none;
+}
 .project p{
-  display: flex;
+  position: relative;
+  animation: float 4s ease-in-out ;
+  bottom: 40px;
+  background-color: #3429fd;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+  text-decoration: none;
   font-size: large;
-  font-weight: 700;
+  font-weight: bold;
+  color:white;
 }
-
-.project img:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(108, 99, 255, 0.2);
+.project img:hover, p{
+  transform: scale(10px);
+  box-shadow: 0 12px 24px rgpa(108,99, 255, 0.2);
   cursor: pointer;
 }
-
-
 /* ---------- Contact ---------- */
 .contact_form {
   display: grid;
