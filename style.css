@@ -273,12 +273,13 @@ section {
   align-items: center;
 }
 .project img{
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
   animation: float 4s ease-in-out infinite;
   margin: 2px solid balck;
   border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project p{
