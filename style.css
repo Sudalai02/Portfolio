@@ -305,6 +305,7 @@ section {
 .slider{
   position: relative;
   width: 100%;
+  max-width: 600px;
   height: auto;
   margin: 50px auto;
   overflow: hidden;
@@ -315,24 +316,27 @@ section {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 15px;
 }
 .fa-arrow-left,
 .fa-arrow-right{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #0a029e;
-  border: none;
-  width: 30px;
-  height: 30px;
+  font-size: 18px;
+  color: white;
+  background-color: #2b20fd;
+  padding: 10px;
   border-radius: 50%;
-  font-size: 22px;
   cursor: pointer;
-  transition: backgroud-color 0.3s;
+  transition: all 0.3s ease;
 }
-
+.fa-arrow-left:hover,
+.fa-arrow-right:hover{
+  transform: scale(1.1);
+}
 #prev{
-  left: 10px;
+  left: 15px;
 }
 #next{
   right: 15px;
@@ -441,3 +445,26 @@ footer {
   }
 }
 
+/* ---------- Image slier ---------- */
+@media(max-width:768px){
+  .fa-arrow-left,
+  .fa-arrow-right{
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+  .pagination{
+    bottom: 10px;
+  }
+  .dot{
+    height: 10px;
+    width: 10px;
+  }
+}
+
+@media (max-width:768px){
+.fa-arrow-left,
+.fa-arrow-right{
+  font-size: 16px;
+  padding: 8px;
+  }
+}
