@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Responsive Portfolio – Sudalai S</title>
+  
 
   <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
   <!-- Project‑specific stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -96,10 +97,9 @@
 
     <section id="work" class="reveal">
       <h2>Projects</h2>
-      <div class="work_grid">
-        <div class="project">
-          
-          <a href="https://sudalai02.github.io/Deshboard-UI/##" target="_blank" class="img-btn">
+      <div class="slider">
+        <div class="slides">
+          <a href="https://sudalai02.github.io/Deshboard-UI/##" target="_blank" class="img-btn active">
             <img src="Images/WhatsApp Image 2025-09-19 at 10.52.10 PM.jpeg" alt="project1">
             <p>Deshboard-UI</p>
           </a>
@@ -127,6 +127,18 @@
             <img src="Images/WhatsApp Image 2025-09-20 at 6.41.17 AM.jpeg" alt="project6">
             <p>Form-Validation</p>
           </a>
+        </div>
+        <div class="arrows">
+          <i class="fa-solid fa-arrow-left" id="prev"></i>
+          <i class="fa-solid fa-arrow-right" id="next"></i>
+        </div>
+        <div class="pagination">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
       </div>
     </section>
