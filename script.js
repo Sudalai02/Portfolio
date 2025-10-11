@@ -14,31 +14,35 @@ const nav_link = document.querySelectorAll(".nav_link");
 
 function scrollActive() {
   const scrollY = window.pageYOffset;
-
-  let currentSectionId=null;
+  let currentSectionId = null;
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 100;
+    const sectionTop = current.offsetTop - 100; // offset for navbar
     const sectionId = current.getAttribute("id");
 
-    if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight - 150) {
-        currentSectionId = sectionId;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight - 150) {
+      currentSectionId = sectionId;
     }
-});
-      nav_link.forEach((link) => link.classList.remove("active"));
+  });
 
-      if(currentSectionId){
-      const targetLink = document.querySelector(`.nav_link[href*='${currentSectionId}']`);
-      if (targetLink) targetLink.classList.add("active");
-    }
+  // Remove active from all
+  nav_link.forEach((link) => link.classList.remove("active"));
+
+  // Add active only to visible section
+  if (currentSectionId) {
+    const targetLink = document.querySelector(
+      `.nav_link[href*='${currentSectionId}']`
+    );
+    if (targetLink) targetLink.classList.add("active");
+  }
 }
 window.addEventListener("scroll", scrollActive);
 
-/* ---------- Image Slider ---------- */
+/* ---------- Image Slider + Dots + Hotspot Popup ---------- */
 document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.querySelector(".slider");
-  const slides = document.querySelectorAll(".slider a");
+  // Slider elements
+  const slides = document.querySelectorAll(".slide");
   const prev = document.getElementById("prev");
   const next = document.getElementById("next");
   const dots = document.querySelectorAll(".pagination .dot");
@@ -46,23 +50,22 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentSlide = 0;
   const slideCount = slides.length;
 
-  // Show only the current slide
+  // Update slides and dots
   function updateSlides() {
     slides.forEach((slide, index) => {
-      slide.style.display = index === currentSlide ? "block" : "none";
+      slide.classList.toggle("active", index === currentSlide);
     });
     dots.forEach((dot, index) => {
       dot.classList.toggle("active", index === currentSlide);
     });
   }
 
-  // Go to a specific slide
+  // Change slides
   function goToSlide(index) {
     currentSlide = (index + slideCount) % slideCount;
     updateSlides();
   }
 
-  // Next/Prev slide functions
   function nextSlide() {
     goToSlide(currentSlide + 1);
   }
@@ -71,11 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
     goToSlide(currentSlide - 1);
   }
 
-  // Event listeners for buttons
+  // Event listeners
   next.addEventListener("click", nextSlide);
   prev.addEventListener("click", prevSlide);
 
-  // Make dots clickable
+  // Clickable dots
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => goToSlide(index));
   });
@@ -83,8 +86,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // Auto slide every 5 seconds
   setInterval(nextSlide, 5000);
 
-  // Initialize first slide
+  // Initialize
   updateSlides();
+
+  /* ---------- Hotspot Popup ---------- */
+  const popup = document.getElementById("popup");
+  const popupTitle = document.getElementById("popupTitle");
+  const viewBtn = document.getElementById("viewProjectBtn");
+  const closePopup = document.querySelector(".popup .close");
+
+  let currentLink = "";
+
+  // When a slide is clicked → show popup
+  slides.forEach((slide) => {
+    slide.addEventListener("click", () => {
+      const title = slide.dataset.title;
+      const link = slide.dataset.link;
+      currentLink = link;
+      popupTitle.textContent = title;
+      popup.style.display = "flex";
+    });
+  });
+
+  // Button → open project
+  viewBtn.addEventListener("click", () => {
+    if (currentLink) window.open(currentLink, "_blank");
+  });
+
+  // Close popup
+  closePopup.addEventListener("click", () => (popup.style.display = "none"));
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
 });
 
 /* ---------- Reveal on scroll ---------- */
